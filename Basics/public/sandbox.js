@@ -49,3 +49,12 @@ age1 = {
     boris: "14"
 };
 age1 = 2;
+// Functions - Basics(6)
+let greet;
+greet = () => {
+    console.log('Good morning');
+};
+const add = (a, b, c) => {
+    console.log(a + b);
+};
+add(8, 9);

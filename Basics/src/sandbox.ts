@@ -71,3 +71,14 @@ age1 = {
     boris: "14"
 }
 age1= 2
+
+// Functions - Basics(6)
+let greet: Function
+greet =()=>{
+    console.log('Good morning')
+}
+
+const add =(a:number , b:number, c?: boolean | string)=>{
+    console.log(a + b)
+}
+ add(8, 9)
