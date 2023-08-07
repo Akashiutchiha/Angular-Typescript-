@@ -1,4 +1,4 @@
-// variable definition
+// variable definition(2)
 let myname = "Chris";
 console.log(myname);
 
@@ -9,7 +9,7 @@ inputs.forEach((input)=>{
     console.log(input);
 })
 
-// Arrays
+// Arrays(3)
 let PLangages = ['python', 'javaScript', 'Java']
 
 PLangages.push('Dart')
@@ -25,14 +25,49 @@ let meals = {
 
 meals.chris;
 
-// Explicit types
+// Explicit types(5)
 let character: string = "hello";
 let age:number;
 let isLoggedIn: boolean;
 let ninjas: string[]; //arrays
+
 let mixed: (string|number|boolean)[] = [] // Union types
+
+let uid: (string|number); //for variables
+uid="123"
+uid=20
+
+let ninjaOne: object; //for objects
+ninjaOne = {
+    namor: 'yoshi',
+    age: 20
+}
+
+
+let ninjaTwo:{
+    name: String,
+    age: number,
+    beltColour: string
+}
+
+ninjaTwo = {
+    name: 'chris',
+    age: 20,
+    beltColour: "red"
+}
 
 
 age = 30;
 // isLoggedIn= 20
 isLoggedIn = false
+
+// Dynamic types (any) - 6
+
+let age1: any = 25;
+
+age1 = true
+age1 = "56"
+age1 = {
+    boris: "14"
+}
+age1= 2
