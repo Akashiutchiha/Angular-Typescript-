@@ -22,3 +22,17 @@ let meals = {
     age : 20,
     height:1.5
 }
+
+meals.chris;
+
+// Explicit types
+let character: string = "hello";
+let age:number;
+let isLoggedIn: boolean;
+let ninjas: string[]; //arrays
+let mixed: (string|number|boolean)[] = [] // Union types
+
+
+age = 30;
+// isLoggedIn= 20
+isLoggedIn = false

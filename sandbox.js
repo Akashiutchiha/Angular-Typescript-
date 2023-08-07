@@ -16,3 +16,13 @@ var meals = {
     age: 20,
     height: 1.5
 };
+meals.chris;
+// Explicit types
+var character = "hello";
+var age;
+var isLoggedIn;
+var ninjas; //arrays
+var mixed = []; // Union types
+age = 30;
+// isLoggedIn= 20
+isLoggedIn = false;
