@@ -78,7 +78,27 @@ book1 = {
 }
 
 displayBookDetails(book1)
-// Exercise 5: Working with Classes
-// Create a new class called `User` with properties `name` (string) and `email` (string). Define a method on the `User` class called `sendEmail` that logs a message with the user's name and email. Instantiate a new `User` object with your own name and email. Call the `sendEmail` method on the user object.
 
-// These exercises cover various topics such as array manipulation, object manipulation, type annotations, type aliases, function usage, and class usage. They provide opportunities to practice and reinforce the concepts you have learned from the provided code.
+
+// Exercise 5: Working with Classes
+// Create a new class called `User` 
+// with properties `name` (string) and `email`
+//  (string). Define a method on the `User` class 
+// called `sendEmail` that logs a message with the 
+// user's name and email. Instantiate a new `User` 
+// object with your own name and email. Call the 
+// `sendEmail` method on the user object.
+
+class User{
+    constructor(
+        readonly name: string,
+        public email: string,
+    ){}
+
+    sendEmail = () => {
+        console.log(this.email, this.name)
+    }
+}
+
+let me = new User("chris", "christianhonore2003")
+me.sendEmail();
