@@ -82,3 +82,16 @@ const add =(a:number , b:number, c?: boolean | string)=>{
     console.log(a + b)
 }
  add(8, 9)
+
+// Type Aliases
+
+type StringOrNum = string | number;
+type objWithName = {name: string, uid: StringOrNum}
+
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a uid ${uid}`) 
+}
+
+const greetings = (user: objWithName):void => {
+    console.log(`${user.name} says hello`);
+}

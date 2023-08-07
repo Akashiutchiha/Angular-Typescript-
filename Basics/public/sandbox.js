@@ -58,3 +58,9 @@ const add = (a, b, c) => {
     console.log(a + b);
 };
 add(8, 9);
+const logDetails = (uid, item) => {
+    console.log(`${item} has a uid ${uid}`);
+};
+const greetings = (user) => {
+    console.log(`${user.name} says hello`);
+};
