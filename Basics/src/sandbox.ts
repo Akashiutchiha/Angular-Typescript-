@@ -96,4 +96,26 @@ const greetings = (user: objWithName):void => {
     console.log(`${user.name} says hello`);
 }
 
-// DOM and Type Casting
+// classes
+class invoice{
+    client: string;
+    details: string;
+    amount: number;
+
+    constructor(c: string, d:string, a: number){
+        this.client = c
+        this.details = d
+        this.amount = a
+    }
+
+    format(){
+        return `${this.client} owes $${this.amount} for ${this.details}`
+    }
+}
+
+const invone = new invoice('mario', "work on the mario", 250)
+const invtwo = new invoice('luigi', "work on the luigi", 300)
+
+let invoices: invoice[] = []
+invoices.push(invone);
+
