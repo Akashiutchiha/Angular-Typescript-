@@ -64,3 +64,4 @@ const logDetails = (uid, item) => {
 const greetings = (user) => {
     console.log(`${user.name} says hello`);
 };
+// DOM and Type Casting

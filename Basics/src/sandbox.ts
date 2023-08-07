@@ -95,3 +95,5 @@ const logDetails = (uid: StringOrNum, item: string) => {
 const greetings = (user: objWithName):void => {
     console.log(`${user.name} says hello`);
 }
+
+// DOM and Type Casting
