@@ -40,11 +40,44 @@ let person: object = {
 
 
 // Exercise 3: Type Annotations and Functions
-// Create a function called `getTotal` that takes in an array of numbers as an argument and returns the sum of all the numbers. Call the `getTotal` function with an array of numbers of your choice and log the result.
+// Create a function called `getTotal` that takes 
+// in an array of numbers as an argument and returns
+//  the sum of all the numbers. Call the `getTotal`
+//  function with an array of numbers of your choice
+//  and log the result.
+
+let getTotal = (nums: number[]) =>{
+    console.log(nums)
+}
 
 // Exercise 4: Type Aliases and Function Usage
-// Define a type alias called `Book` that represents an object with properties `title` (string), `author` (string), and `year` (number). Then, create a function called `displayBookDetails` that takes in a parameter of type `Book` and logs the book's title, author, and year. Call the `displayBookDetails` function with an object that matches the `Book` type and log the book details.
+// Define a type alias called `Book` that represents
+//  an object with properties `title` (string), 
+// `author` (string), and `year` (number). 
+// Then, create a function called `displayBookDetails`
+//  that takes in a parameter of type `Book` and logs
+//  the book's title, author, and year. Call the
+//  `displayBookDetails` function with an object that
+//  matches the `Book` type and log the book details.
 
+type Book = {
+    title: string,
+    author:string,
+    year: number
+}
+
+function displayBookDetails (book: Book){
+    console.log(book.author, book.title, book.year)
+}
+
+let book1:Book
+book1 = {
+    title: 'Readme.md',
+    author: "chris",
+    year: 2023
+}
+
+displayBookDetails(book1)
 // Exercise 5: Working with Classes
 // Create a new class called `User` with properties `name` (string) and `email` (string). Define a method on the `User` class called `sendEmail` that logs a message with the user's name and email. Instantiate a new `User` object with your own name and email. Call the `sendEmail` method on the user object.
 
