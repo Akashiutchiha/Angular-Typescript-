@@ -26,6 +26,18 @@ favoriteLanguages.splice(1);
 //  `height`. Assign appropriate values to each 
 // property and log the `person` object.
 
+let meals1:object;
+meals1 = {
+    gender: 'male',
+}
+
+let person: object = {
+    name:'chris',
+    age: 15,
+    gender: 'Male',
+    height: 1.36
+}
+
 
 // Exercise 3: Type Annotations and Functions
 // Create a function called `getTotal` that takes in an array of numbers as an argument and returns the sum of all the numbers. Call the `getTotal` function with an array of numbers of your choice and log the result.
