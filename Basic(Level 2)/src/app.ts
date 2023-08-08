@@ -1,5 +1,26 @@
 import {invoice} from './classes/invoice.js'
 
+//interfaces
+ interface Animal {
+    name: string;
+    age: number;
+    height: number;
+    color: string;
+    sound: Function
+ }
+
+ let Dog: Animal = {
+    name: "jack",
+    age: 5,
+    height: 2.3,
+    color: 'black',
+    sound: () => {
+        console.log("Wooouf")
+    }
+ }
+
+ Dog.sound()
+
 const anchor = document.querySelector('a')!
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement

@@ -1,4 +1,14 @@
 import { invoice } from './classes/invoice.js';
+let Dog = {
+    name: "jack",
+    age: 5,
+    height: 2.3,
+    color: 'black',
+    sound: () => {
+        console.log("Wooouf");
+    }
+};
+Dog.sound();
 const anchor = document.querySelector('a');
 const form = document.querySelector(".new-item-form");
 // console.log(form.children);
