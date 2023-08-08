@@ -96,26 +96,3 @@ const greetings = (user: objWithName):void => {
     console.log(`${user.name} says hello`);
 }
 
-// classes
-class invoice{
-    // client: string;
-    // details: string;
-    // amount: number;
-
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ){}
-
-    format(){
-        return `${this.client} owes $${this.amount} for ${this.details}`
-    }
-}
-
-const invone = new invoice('mario', "work on the mario", 250)
-const invtwo = new invoice('luigi', "work on the luigi", 300)
-
-let invoices: invoice[] = []
-invoices.push(invone);
-

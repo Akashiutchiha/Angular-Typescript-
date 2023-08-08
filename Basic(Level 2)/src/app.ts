@@ -1,7 +1,17 @@
+import {invoice} from './classes/invoice.js'
+
 const anchor = document.querySelector('a')!
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement
 // console.log(form.children);
+
+// class
+const invone = new invoice('mario', "work on the mario", 250)
+const invtwo = new invoice('luigi', "work on the luigi", 300)
+
+let invoices: invoice[] = []
+invoices.push(invone);
+
 
 
 
