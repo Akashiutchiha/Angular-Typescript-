@@ -1,32 +1,46 @@
 import {invoice} from './classes/invoice.js'
+import {payment} from './classes/paymemt.js'
+import {HasFormatter} from './interfaces/HasFormatter.js'
 
 //interfaces
- interface Animal {
-    name: string;
-    age: number;
-    height: number;
-    color: string;
-    sound: Function
- }
+//  interface Animal {
+//     name: string;
+//     age: number;
+//     height: number;
+//     color: string;
+//     sound: Function
+//  }
 
- let Dog: Animal = {
-    name: "jack",
-    age: 5,
-    height: 2.3,
-    color: 'black',
-    sound: () => {
-        console.log("Wooouf")
-    }
- }
+//  let Dog: Animal = {
+//     name: "jack",
+//     age: 5,
+//     height: 2.3,
+//     color: 'black',
+//     sound: () => {
+//         console.log("Wooouf")
+//     }
+//  }
 
- Dog.sound()
+//  Dog.sound()
 
 const anchor = document.querySelector('a')!
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement
 // console.log(form.children);
 
-// class
+
+let docOne: HasFormatter
+let doctwo: HasFormatter
+
+docOne = new invoice('yoshi', "web work", 200)
+doctwo = new payment('mario', "plumbing work", 250)
+
+let docs: HasFormatter[] = []
+docs.push(docOne);
+docs.push(doctwo)
+
+console.log(docs)
+
 const invone = new invoice('mario', "work on the mario", 250)
 const invtwo = new invoice('luigi', "work on the luigi", 300)
 
@@ -44,10 +58,15 @@ const amount = document.querySelector('#amount') as HTMLInputElement
 
 form.addEventListener('submit', (e: Event)=>{
     e.preventDefault();
+
+    let doc: HasFormatter
+    if(type.value == 'invoice'){
+        doc = new invoice(tofrom.value, details.value, amount.valueAsNumber)
+    }else{
+        doc = new payment(tofrom.value, details.value, amount.valueAsNumber)
+    }
+
     console.log(
-        type.value,
-        tofrom.value,
-        details.value,
-        amount.value
+        doc
     )
 })
