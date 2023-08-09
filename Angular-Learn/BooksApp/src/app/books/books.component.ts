@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Book } from '../interfaces/Book';
 
 @Component({
@@ -6,11 +6,9 @@ import { Book } from '../interfaces/Book';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
-export class BooksComponent{
-Singlebook: any;
+export class BooksComponent {
 
-  constructor(){}
-  
+  // books Data
   books:Book[] = [
     {
       name: "The Pragmatic Programmer",
@@ -38,24 +36,10 @@ Singlebook: any;
     },
   ]
 
-  Cart:Book[] = [];
-  
-  isDisabled:boolean = false;
-  myname: string = ""
-  
-  handleClick = ()=>{
-    console.log("Hello, I've been clicked");
-    this.isDisabled = true
+  // for controlling display of books
+  isShowingBooks:boolean = true;
+
+  addtoCart(event:any){
+    console.log(event)
   }
-
-  handleInput(event: any){
-    this.myname = event.target.value
-  }
-
-  isShowingBooks: boolean = true;
-
-  // AddToCart(){
-  //   console.log("sdsa")
-  // }
-
 }

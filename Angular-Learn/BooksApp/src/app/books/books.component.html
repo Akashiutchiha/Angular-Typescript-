@@ -1,0 +1,8 @@
+<div>
+    <button (click)="isShowingBooks = !isShowingBooks">Toogle Show</button>
+    <ul *ngIf="isShowingBooks">
+        <ng-container *ngFor="let book of books">
+            <app-book (bookEmitter)="addtoCart($event)" [book]="book"></app-book>
+        </ng-container>
+    </ul>
+</div>

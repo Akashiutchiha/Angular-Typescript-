@@ -10,9 +10,9 @@ import { Outlet } from 'react-router-dom';
 })
 export class BookComponent {
   @Input() book:Book = {} as Book;
-  @Output() Bookemitor = new EventEmitter<Book>();
+  // @Output() Bookemitor = new EventEmitter<Book>();
  
-  addToCart(){
-    this.Bookemitor.emit(this.book)
-  }
+  // addToCart(){
+  //   this.Bookemitor.emit(this.book)
+  // }
 }
