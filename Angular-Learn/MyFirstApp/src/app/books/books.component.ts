@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-
+import { Book } from '../interfaces/Book';
 
 @Component({
   selector: 'app-books',
@@ -7,18 +7,39 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent{
+Singlebook: any;
 
   constructor(){}
   
+  books:Book[] = [
+    {
+      name: "The Pragmatic Programmer",
+      author: "Andrew Hunt and David Thomas",
+      src: "https://m.media-amazon.com/images/I/91WFb-PpoNL._AC_UY218_.jpg",
+      price: 50
+    },
+    {
+      name: "Clean Code",
+      author: "Robert C. Martin",
+      src: "https://m.media-amazon.com/images/I/41xShlnTZTL._AC_UY218_.jpg",
+      price: 450
+    },
+    {
+      name: "A Programmer's Guide to Computer Science",
+      author: "Dr. William M Springer II",
+      src: "https://m.media-amazon.com/images/I/61fFh20AhQL._AC_UY218_.jpg",
+      price: 200
+    },
+    {
+      name: "A Programmer's Guide to Computer Science",
+      author: "Dr. William M Springer II",
+      src: "https://m.media-amazon.com/images/I/61fFh20AhQL._AC_UY218_.jpg",
+      price: 200
+    },
+  ]
 
-  name: string = "Clean Code"
-  author: string = "Uncle Bobs"
-  src:string = "https://m.media-amazon.com/images/I/41xShlnTZTL._AC_UY218_.jpg"
-
-  name2: string = "The pragmatic Programmer"
-  author2: string = "christian N. honore"
-  src2: string = "https://m.media-amazon.com/images/I/91WFb-PpoNL._AC_UY218_.jpg"
-
+  Cart:Book[] = [];
+  
   isDisabled:boolean = false;
   myname: string = ""
   
@@ -30,5 +51,7 @@ export class BooksComponent{
   handleInput(event: any){
     this.myname = event.target.value
   }
+
+  isShowingBooks: boolean = true;
 
 }

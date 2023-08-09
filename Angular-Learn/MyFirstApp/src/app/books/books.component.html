@@ -1,16 +1,9 @@
-<h2>Programming book list</h2>
-<button (click)="handleClick()" [disabled]="isDisabled">Show books</button>
-<input type="text" (input)="handleInput($event)">
-<p>{{ myname }}</p>
-<ul>
-    <li>
-        <img [src]="src" 
-        [alt]="name" widthx="100">
-        {{name}} by {{author}}
-    </li>  
-    <li>
-        <img [src]="src2" 
-        [alt]="name2" width="100">
-        {{name2}} by {{author2}}
-    </li>  
-</ul>
+<h1>Programming Books Lists</h1>
+
+
+    <ul *ngIf="isShowingBooks">
+        <ng-container *ngFor="let Singlebook of books">
+           <app-book [book]="Singlebook"></app-book>
+        </ng-container>
+    </ul>
+

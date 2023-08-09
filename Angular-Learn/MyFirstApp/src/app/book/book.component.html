@@ -1,0 +1,8 @@
+
+<li class="book">
+                
+    <img [src]="book.src" [alt]="book.name" width="100">
+    <p class="Title">{{book.name | titlecase}} by {{book.author | titlecase}}</p> 
+    <p class="currency">{{book.price | currency:'XAF'}}</p>
+    <button (click)="addToCart()">Add to Cart</button>
+</li>  
