@@ -5,11 +5,13 @@ import { BooksComponent } from './books/books.component';
 import { BookComponent } from "./books/book/book.component";
 import { ServicesService } from "./books/services.service";
 import { BooksModule } from "./books/books/books.module";
+import { CartComponent } from './cart/cart.component';
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, CartComponent],
     bootstrap: [AppComponent],
-    imports: [BrowserModule, BooksModule],
+    imports: [BrowserModule, BooksModule, AppRoutingModule],
     providers: [ServicesService]
 
 })

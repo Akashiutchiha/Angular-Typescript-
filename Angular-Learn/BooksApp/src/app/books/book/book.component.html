@@ -2,7 +2,9 @@
             <p class=""><img [src]="book.src" alt=""></p>
             <p>{{ book.name | titlecase}} by {{ book.author | titlecase }}</p>
             <p>{{ book.price | currency:'USD'}}</p>
-            <button (click)="FromChildEvent()">Add to Cart</button>
+            <button *ngIf="!isInCart" (click)="FromChildEvent()">Add to Cart</button>
+            <button *ngIf="isInCart" (click)="removeFromCart()" >Remove from Cart</button>
+
         </li>
     
 

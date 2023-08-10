@@ -1,0 +1,10 @@
+<ul>
+    <p>Cart</p>
+    <ng-container *ngFor="let cart of getCart()">
+        <li>
+            {{ cart.name }} by {{cart.author}}
+        </li>
+    </ng-container>
+</ul>
+    
+
