@@ -3,26 +3,26 @@ import { ListTemplate } from './classes/listTemplate.js'
 import {payment} from './classes/paymemt.js'
 import {HasFormatter} from './interfaces/HasFormatter.js'
 
-//interfaces
-//  interface Animal {
-//     name: string;
-//     age: number;
-//     height: number;
-//     color: string;
-//     sound: Function
-//  }
 
-//  let Dog: Animal = {
-//     name: "jack",
-//     age: 5,
-//     height: 2.3,
-//     color: 'black',
-//     sound: () => {
-//         console.log("Wooouf")
-//     }
-//  }
+ interface Animal {
+    name: string;
+    age: number;
+    height: number;
+    color: string;
+    sound: Function
+ }
 
-//  Dog.sound()
+ let Dog: Animal = {
+    name: "jack",
+    age: 5,
+    height: 2.3,
+    color: 'black',
+    sound: () => {
+        console.log("Wooouf")
+    }
+ }
+
+ Dog.sound()
 
 const anchor = document.querySelector('a')!
 
