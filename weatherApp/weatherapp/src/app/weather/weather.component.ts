@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { WeatherServices } from '../services/get_weather';
+import { ServicesService } from '../services/services.service';
 import { HttpClient } from '@angular/common/http';
+import { WeatherData } from '../Interfaces/data_format';
 
 
 @Component({
@@ -10,12 +11,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WeatherComponent {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private weatherService: ServicesService) { }
   location: string = ""
-  weather : WeatherServices = new WeatherServices(this.http)
+  weather_f_s: any;
+  weather : ServicesService = new ServicesService(this.http)
   getweather(event: any){
     event.preventDefault()
     this.weather.getweather(this.location)
+    this.weather_f_s = this.weather.weatherData
+    console.log(this.weather_f_s)
   }
   
 }

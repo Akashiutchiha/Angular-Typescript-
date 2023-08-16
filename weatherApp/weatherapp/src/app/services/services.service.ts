@@ -1,10 +1,13 @@
+import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http"
 import { WeatherData } from "../Interfaces/data_format"
 // import { WeatherData } from "../Interfaces/data_format"
 
 // import { Inject, Injectable } from "@angular/core"
-
-export class WeatherServices{
+@Injectable({
+  providedIn: 'root'
+})
+export class ServicesService{
 
     
     constructor(private http: HttpClient) { }
